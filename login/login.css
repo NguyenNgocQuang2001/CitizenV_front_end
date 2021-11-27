@@ -19,6 +19,7 @@ div#dangnhap {
     display: flex;
     flex-direction: column;
     background-color: white;
+    box-shadow: 10px 10px 10px 2px grey;
 }
 
 div#dau {
@@ -67,14 +68,70 @@ div#flex1 > div {
     color: rgb(255, 0, 0);
 }
 
+div#flex2 {
+    display: flex;
+    flex-direction: column;
+}
+
+div#flex2 > div.dangnhap {
+     text-align: center;
+     height: 15%;
+     width: 100%;
+}
+
+div#flex2 > div.dangnhap > input {
+    height: 80%;
+    width: 90%;
+    font-size: 2vw;
+    border-radius: 15px;
+    border: 1px solid rgb(36, 14, 238);
+    background-color: rgba(23, 128, 75, 0.2);
+}
+
+div#flex2 > div.dangnhap > button {
+    height: 80%;
+    width: 90%;
+    font-size: 2vw;
+    border-radius: 15px;
+    border: 1px solid rgb(36, 14, 238);
+    background-color: rgba(47, 0, 218, 0.5);
+}
+
+div#login > button:hover {
+    color: rgb(251, 255, 13);
+}
+
+div#flex2 > div#pp {
+    height: 10%;
+    width: 100%;
+    text-align: center;
+    color: rgb(16, 7, 136);
+    font-size: 2vw;
+    padding-top: calc(4.5vh - 1vw);
+}
+
+div#forget {
+    text-align: end;
+    padding-right: 5%;
+}
+
+div#forget > button {
+    border: none;
+    color: rgb(0, 68, 255);
+    background-color: rgba(23, 128, 75, 0);
+}
 @media screen and (min-aspect-ratio: 3/2) {
     div#dangnhap {
         height: 90vh;
         aspect-ratio: 3/2;
     }
     div#flex1 > img {
-        height: calc(62.5vh);
+        height: calc(60vh);
     }
+}
+
+div#forget > button:hover {
+    color: rgb(255, 2, 2);
 }
 
 @media screen and (max-aspect-ratio: 3/2) {
@@ -84,6 +141,18 @@ div#flex1 > div {
     }
     div#flex1 > img {
         height: calc(45vw);
+    }
+}
+
+@media screen and (max-aspect-ratio: 1/1) {
+    div#flex2 > div#pp {
+        font-size: 3vh;
+    }
+    div#flex2 > div.dangnhap > input {
+        font-size: 3vh;
+    }
+    div#flex2 > div.dangnhap > button {
+        font-size: 3vh;
     }
 }
 

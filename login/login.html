@@ -19,15 +19,28 @@
             <div id="than">
                 <div class="flex-item" id="flex1">
                     <img src="images/danso.png" alt="Đảng Cộng Sản">
-                    <div>
+                    <div >
                         CitizenV - Ứng dụng công nghệ vào quản lý dân số
                     </div>
                 </div>
                 <div class="flex-item" id="flex2">
-                    
+                    <div id="pp">Sử dụng tài khoản bạn được cung cấp</div>
+                    <div class="dangnhap">
+                        <input type="text" placeholder="Tên tài khoản" id="taikhoan">
+                    </div>
+                    <div class="dangnhap" id="password">
+                        <input type="password" placeholder="Mật khẩu">
+                    </div>
+                    <div class="dangnhap" id="login">
+                        <button type="button" onclick="login(this)">Đăng nhập</button>
+                    </div>
+                    <div id="forget">
+                        <button type="button" onclick="forget(this)">Quên mật khẩu ?</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="login.js"></script>
 </body>
 </html>
