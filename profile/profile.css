@@ -7,7 +7,7 @@ body {
 
 #container {
     width: 50vw;
-    height: 93vh;
+    height: 86vh;
     border: 5px solid black;
     border-radius: 15px;
     margin-left: auto;
@@ -19,21 +19,47 @@ body {
     padding-top: 1vh;
 }
 div.flexs {
-    width: 100%;
+    width: calc(100% - 6vw);
     height: 7vh;
     margin-left: 3vw;
     font-size: 1.5vw;
+}
+
+div.i-flexs {
+    width: calc(100% - 1vw);
+    height: 7vh;
+    font-size: 1.5vw;
+    margin-left: 1vw;
+}
+
+#flexs {
+    width: calc(100% - 6vw);
+    height: 28vh;
+    margin-left: 3vw;
+    font-size: 1.5vw;
+    display: flex;
+    flex-direction: row;
+}
+
+#c-flexs {
+    width: calc(100% - 28vh);
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    height: 28vh;
+    border-radius: 15px;
 }
 
 input, select {
 
     border: none;
     font-size: 1.5vw;
-    width: calc(100% - 6vw);
+    width: 100%;
 }
 
 #chinhsua {
-    margin-left: 0px;
     text-align: center;
 }
 
@@ -59,6 +85,11 @@ div#chinhsua > button:hover {
         font-size: 20px;
     }
 
+    div.i-flexs {
+
+        font-size: 17px;
+    }
+
     input, select {
 
         font-size: 20px;
@@ -77,6 +108,11 @@ div#chinhsua > button:hover {
         font-size: 15px;
     }
 
+    div.i-flexs {
+
+        font-size: 15px;
+    }
+
     input, select {
 
         font-size: 15px;
@@ -87,6 +123,11 @@ div#chinhsua > button:hover {
 @media screen and (max-width : 300px) {
     
     div.flexs {
+
+        font-size: 10px;
+    }
+
+    div.i-flexs {
 
         font-size: 10px;
     }
