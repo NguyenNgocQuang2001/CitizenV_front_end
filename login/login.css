@@ -34,7 +34,7 @@ div#dau > div {
     margin-left: auto;
     margin-right: auto;
     height: 100%;
-    font-size: 4vw;
+    font-size: 50px;
     padding-top: calc(8vh - 2vw);
     color:rgb(135, 11, 236);
 }
@@ -82,7 +82,7 @@ div#flex2 > div.dangnhap {
 div#flex2 > div.dangnhap > input {
     height: 80%;
     width: 90%;
-    font-size: 2vw;
+    font-size: 25px;
     border-radius: 15px;
     border: 1px solid rgb(36, 14, 238);
     background-color: rgba(23, 128, 75, 0.2);
@@ -91,7 +91,7 @@ div#flex2 > div.dangnhap > input {
 div#flex2 > div.dangnhap > button {
     height: 80%;
     width: 90%;
-    font-size: 2vw;
+    font-size: 25px;
     border-radius: 15px;
     border: 1px solid rgb(36, 14, 238);
     background-color: rgba(47, 0, 218, 0.5);
@@ -106,7 +106,7 @@ div#flex2 > div#pp {
     width: 100%;
     text-align: center;
     color: rgb(16, 7, 136);
-    font-size: 2vw;
+    font-size: 25px;
     padding-top: calc(4.5vh - 1vw);
 }
 
@@ -120,13 +120,28 @@ div#forget > button {
     color: rgb(0, 68, 255);
     background-color: rgba(23, 128, 75, 0);
 }
+
 @media screen and (min-aspect-ratio: 3/2) {
     div#dangnhap {
         height: 90vh;
         aspect-ratio: 3/2;
     }
     div#flex1 > img {
-        height: calc(60vh);
+        height: 80%;
+    }
+}
+
+@media screen and (max-aspect-ratio: 1/1) {
+    
+    div#flex1 {
+        display: none;
+    }
+
+    div#flex2 {
+        width: 90%;
+        height: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -134,29 +149,82 @@ div#forget > button:hover {
     color: rgb(255, 2, 2);
 }
 
-@media screen and (max-aspect-ratio: 3/2) {
+@media screen and (max-width : 1200px) {
     div#dangnhap {
         height: 90vh;
         width: 90vw;
     }
-    div#flex1 > img {
-        height: calc(45vw);
+
+    div#flex2 > div#pp {
+        font-size: 25px;
+    }
+
+    div#flex2 > div.dangnhap > input {
+        font-size: 25px;
+    }
+
+    div#flex2 > div.dangnhap > button {
+        font-size: 25px;
+    }
+
+    div#dau > div {
+        font-size: 50px;
+    }
+
+    div#flex1 > div {
+
+        font-size: 20px;
     }
 }
 
-@media screen and (max-aspect-ratio: 1/1) {
+
+@media screen and (max-width : 900px) {
+    
+
     div#flex2 > div#pp {
-        font-size: 3vh;
+        font-size: 20px;
     }
     div#flex2 > div.dangnhap > input {
-        font-size: 3vh;
+        font-size: 20px;
     }
     div#flex2 > div.dangnhap > button {
-        font-size: 3vh;
+        font-size: 20px;
+    }
+
+    div#dau > div {
+        font-size: 40px;
     }
 }
 
-@media screen and (max-width: 648px) {
+@media screen and (max-width : 768px) {
+    
+
+    div#flex1 {
+        display: none;
+    }
+
+    div#flex2 {
+        width: 90%;
+        height: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    div#flex2 > div#pp {
+        font-size: 23px;
+    }
+    div#flex2 > div.dangnhap > input {
+        font-size: 23px;
+    }
+    div#flex2 > div.dangnhap > button {
+        font-size: 23px;
+    }
+
+    div#dau > div {
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 640px) {
     div#dau {
         flex-direction: column;
     }
@@ -167,7 +235,7 @@ div#forget > button:hover {
     }
     div#dau > div {
         height: 40%;
-        font-size: 4vw;
+        font-size: 25px;
         padding-top: calc(3.2vh - 2vw);
     }
     div#flex1 {
@@ -175,5 +243,59 @@ div#forget > button:hover {
     }
     div#flex2 {
         width: 100%;
+    }
+
+    div#flex2 > div#pp {
+        font-size: 20px;
+    }
+    div#flex2 > div.dangnhap > input {
+        font-size: 24px;
+    }
+    div#flex2 > div.dangnhap > button {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width : 480px) {
+    
+
+    div#flex2 > div#pp {
+        font-size: 15px;
+    }
+    div#flex2 > div.dangnhap > input {
+        font-size: 15px;
+    }
+    div#flex2 > div.dangnhap > button {
+        font-size: 14px;
+    }
+
+    div#dau > div {
+        font-size: 20px;
+    }
+
+    div#flex2 > div.dangnhap > input {
+        border-radius: 10px;
+    }
+
+    div#flex2 > div.dangnhap > button {
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width : 320px) {
+    
+
+    div#flex2 > div#pp {
+        font-size: 10px;
+    }
+    div#flex2 > div.dangnhap > input {
+        font-size: 10px;
+    }
+    div#flex2 > div.dangnhap > button {
+        font-size: 10px;
+    }
+
+    div#dau > div {
+        font-size: 15px;
     }
 }
