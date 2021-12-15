@@ -1,0 +1,77 @@
+body {
+    
+    background-color: rgba(235, 211, 230, 0.507);
+}
+
+div#forget {
+
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    margin-top : 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 250px;
+    padding: 0px;
+    background-color: rgba(83, 155, 151, 0.342);
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 5px rgba(10, 122, 117, 0.507);
+}
+
+input.matkhau {
+
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    height: 50px;
+    font-size: 25px;
+    border-radius: 15px;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+button#oke {
+
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 15px;
+    border: 2px solid rgba(46, 61, 71, 1);
+}
+
+button#oke:hover {
+
+    color: rgb(0, 60, 255);
+    border: 2px solid rgb(229, 255, 0);
+}
+
+
+@media screen and (max-width : 450px) {
+    
+    div#forget {
+
+        width: 90%;
+        height: 200px;
+        border-radius: 10px;
+    }
+
+    input.matkhau {
+
+        margin-top: 15px;
+        height: 40px;
+        font-size: 20px;
+        border-radius: 10px;
+    }
+
+    button#oke {
+
+        margin-top: 15px;
+        height: 40px;
+        font-size: 20px;
+        border-radius: 10px;
+    }
+}
