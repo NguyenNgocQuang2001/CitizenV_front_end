@@ -63,40 +63,28 @@ function hideAll(name) {
     var parent = name.slice(0,name.length - 12);
     $(name).hide();
     $(parent + 'Button').css('background-color','#81DAF5');
-    console.log(parent);
 }
 
-$('.updateInfoMain').click(function() {
-    $(".update-modal").show();
-})
+function hideAndShow(modal, showButton, hideButton) {
+    $(showButton).click(function() {
+        $(modal).show();
+    })
+    $(hideButton).click(function() {
+        $(modal).hide();
+    })
+}
 
-$('.cancelUpdate').click(function() {
-    $(".update-modal").hide();
-})
+hideAndShow('.update-modal','.updateInfoMain','.cancelUpdate');
 
-$(".giveAccount").click(function() {
-    $('.register-modal').show();
-})
+hideAndShow('.register-modal','.giveAccount','.cancelRegister');
 
-$(".cancelRegister").click(function() {
-    $('.register-modal').hide();
-})
+hideAndShow('.giveId-modal','.giveId', '.cancelGiveId');
 
-$(".giveId").click(function() {
-    $('.giveId-modal').show();
-})
+hideAndShow('.givePMS-modal', '.givePMS', '.cancelGivePMS');
 
-$(".cancelGiveId").click(function() {
-    $('.giveId-modal').hide();
-})
+hideAndShow('.ppSentByB2-modal', '.listPPSentByB2', '.closeListPPSentByB2');
 
-$(".givePMS").click(function() {
-    $('.givePMS-modal').show();
-})
-
-$('.cancelGivePMS').click(function() {
-    $('.givePMS-modal').hide();
-})
+hideAndShow('.warning-modal', '.completeButton','.cancelButton');
 
 function addIdToSelectId() {
     for (var i = 1; i <= 63; i++) {
@@ -133,12 +121,13 @@ function addInfo(stt, name, status, population, href) {
     $('.main-web').append(main);
 }
 
-function addInfoCitizen(stt, name, gender, dob, job, href) {
+function addInfoCitizen(stt, name, gender, dob, job, villageId, href) {
     var sttDiv = $("<div></div>").text(stt);
     var nameDiv = $("<div></div>").text(name);
     var genderDiv = $("<div></div>").text(gender);
     var dobDiv = $("<div></div>").text(dob);
     var jobDiv = $("<div></div>").text(job);
+    var villageIdDiv = $("<div></div>").text(villageId);
     var main = $("<a></a>");
     main.attr("href", href);
     main.addClass("dis-flex main");
@@ -146,12 +135,36 @@ function addInfoCitizen(stt, name, gender, dob, job, href) {
     nameDiv.addClass("c-2-info bor-right-2");
     genderDiv.addClass("c-3-info bor-right-2");
     dobDiv.addClass("c-4-info bor-right-2");
-    jobDiv.addClass("c-5-info");
+    jobDiv.addClass("c-5-info bor-right-2");
+    villageIdDiv.addClass("c-6-info");
     if (stt % 2 == 0) {
         main.addClass('odd-line');
     }
-    main.append(sttDiv, nameDiv, genderDiv, dobDiv, jobDiv);
+    main.append(sttDiv, nameDiv, genderDiv, dobDiv, jobDiv, villageIdDiv);
     $('.main-web-info').append(main);
+}
+
+function addInfoCitizenByB2(stt, name, gender, dob, job, villageId, href) {
+    var sttDiv = $("<div></div>").text(stt);
+    var nameDiv = $("<div></div>").text(name);
+    var genderDiv = $("<div></div>").text(gender);
+    var dobDiv = $("<div></div>").text(dob);
+    var jobDiv = $("<div></div>").text(job);
+    var villageIdDiv = $("<div></div>").text(villageId);
+    var main = $("<a></a>");
+    main.attr("href", href);
+    main.addClass("dis-flex main");
+    sttDiv.addClass("c-1-info bor-right-2");
+    nameDiv.addClass("c-2-info bor-right-2");
+    genderDiv.addClass("c-3-info bor-right-2");
+    dobDiv.addClass("c-4-info bor-right-2");
+    jobDiv.addClass("c-5-info bor-right-2");
+    villageIdDiv.addClass("c-6-info");
+    if (stt % 2 == 0) {
+        main.addClass('odd-line');
+    }
+    main.append(sttDiv, nameDiv, genderDiv, dobDiv, jobDiv, villageIdDiv);
+    $('.ppSentByB2List').append(main);
 }
 
 for (var i = 0; i < 99; i ++) {
@@ -159,5 +172,6 @@ for (var i = 0; i < 99; i ++) {
 }
 
 for(var i = 0; i < 99; i++) {
-    addInfoCitizen(i, 'Le Cong Nam', 'Nam', '01/02/2001', 'IT','https://google.com');
+    addInfoCitizen(i, 'Lê Công Nam', 'Nam', '01/02/2001', 'IT','1','https://google.com');
+    addInfoCitizenByB2(i, 'Lê Công Nam', 'Nam', '01/02/2001', 'IT','1','https://google.com');
 }
