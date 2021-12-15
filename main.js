@@ -113,17 +113,17 @@ function addIdToSelectId() {
 
 addIdToSelectId();
 
-function addInfo(stt, name, status, population) {
+function addInfo(stt, name, status, population, href) {
     var sttDiv = $("<div></div>").text(stt);
-    console.log(sttDiv);
-    var nameDiv = $("<div></div>").text(name);
+    var nameDiv = $("<a></a>").text(name);
     var statusDiv = $("<div></div>").text(status);
     var ppltDiv = $("<div></div>").text(population);
     sttDiv.addClass("c-1 bor-right-2");
     nameDiv.addClass("c-2 bor-right-2");
     statusDiv.addClass("c-3 bor-right-2");
     ppltDiv.addClass("c-4");
-    var main = $("<div></div>");
+    var main = $("<a></a>");
+    main.attr("href", href);
     main.addClass("dis-flex main");
     main.append(sttDiv, nameDiv, statusDiv, ppltDiv);
     if (stt % 2 == 0) {
@@ -133,11 +133,31 @@ function addInfo(stt, name, status, population) {
     $('.main-web').append(main);
 }
 
-addInfo('1','Bắc Ninh', 'Đã nhập xong', '1000000');
-addInfo('2','TP. Hà Nội', 'Chưa nhập xong', 'N/A');
-addInfo('3','Tp. Hồ Chí Minh','Đã nhập xong', '999999');
-addInfo('4','Bắc Giang','Đã nhập xong', '98889');
-addInfo('5','Hưng Yên', 'Chưa nhập xong', 'N/A');
+function addInfoCitizen(stt, name, gender, dob, job, href) {
+    var sttDiv = $("<div></div>").text(stt);
+    var nameDiv = $("<div></div>").text(name);
+    var genderDiv = $("<div></div>").text(gender);
+    var dobDiv = $("<div></div>").text(dob);
+    var jobDiv = $("<div></div>").text(job);
+    var main = $("<a></a>");
+    main.attr("href", href);
+    main.addClass("dis-flex main");
+    sttDiv.addClass("c-1-info bor-right-2");
+    nameDiv.addClass("c-2-info bor-right-2");
+    genderDiv.addClass("c-3-info bor-right-2");
+    dobDiv.addClass("c-4-info bor-right-2");
+    jobDiv.addClass("c-5-info");
+    if (stt % 2 == 0) {
+        main.addClass('odd-line');
+    }
+    main.append(sttDiv, nameDiv, genderDiv, dobDiv, jobDiv);
+    $('.main-web-info').append(main);
+}
+
 for (var i = 0; i < 99; i ++) {
-    addInfo(i,'Bắc Ninh', 'Chưa nhập xong', 'N/A');
+    addInfo(i,'Bắc Ninh', 'Chưa nhập xong', 'N/A', "https://www.google.com");
+}
+
+for(var i = 0; i < 99; i++) {
+    addInfoCitizen(i, 'Le Cong Nam', 'Nam', '01/02/2001', 'IT','https://google.com');
 }
