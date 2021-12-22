@@ -42,9 +42,9 @@
                                 <p>Thêm thông tin người dân</p>
                             </div>
                         </a>
-                        <div class="singleDropDown bor-bottom listPPSentByB2">
+                       <!-- <div class="singleDropDown bor-bottom listPPSentByB2">
                             <p>Danh sách người dân B2 cấp</p>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="userButton pos-relative" onclick = 'showDropDown()'>
@@ -95,9 +95,9 @@
                         <p>Thêm thông tin người dân</p>
                     </div>
                     </a>
-                    <div class="singleDropDown bor-bottom listPPSentByB2">
+                    <!--<div class="singleDropDown bor-bottom listPPSentByB2">
                         <p>Danh sách người dân B2 cấp</p>
-                    </div>
+                    </div>-->
                 </div>
             </div>
             <div class="userButtonTablet singleMenuTablet pos-relative" onclick = 'showDropDownTablet()'>
@@ -135,7 +135,11 @@
             <form action="" class = "updateInfo-Form">
                 <div class="emailField singleUpdateInfo">
                     <label class = "leftSide-Label" for="email">Email</label>
-                    <input type="text" name = "email" required>
+                    <input type="email" name = "email" required>
+                </div>
+                <div class="oldPasswordField singleUpdateInfo">
+                    <label class = "leftSide-Label" for="oldPassword">Mật khẩu cũ</label>
+                    <input type="password" name = "oldPassword" required>
                 </div>
                 <div class="newPasswordField singleUpdateInfo">
                     <label class = "leftSide-Label" for="newPassword">Mật khẩu mới</label>
@@ -194,15 +198,15 @@
          <form action="" class = "register-Form">
             <div class="singleUpdateInfo ">
                 <label class = "leftSide-Label" for="lowLevelName">Chọn tỉnh/ thành phố</label>
-               <select name="lowLevelName">
+                <select name="lowLevelName">
                    <option value="Bac Ninh">Bắc Ninh</option>
                    <option value="Ha Noi">TP.Hà Nội</option>
                    <option value="Ho Chi Minh">TP.Hồ Chí Minh</option>
-               </select>
+                </select>
             </div>
             <div class="singleUpdateInfo ">
                 <label class = "leftSide-Label" for="lowLevelName">Chọn mã</label>
-               <select name="lowLevelID" class = "lowLevelID">   
+                <input type="text">  
                </select>
             </div>
             <div class="updateInfo-Button">
@@ -247,7 +251,7 @@
 </div>
 
 <!---------------------------------------List people sent by B2-------------------------------------->
-<div class="ppSentByB2-modal modal">
+<!--<div class="ppSentByB2-modal modal">
     <div class = "ppSentByB2Table table">
     <div class="ppSentByB2List">
         <div class="header-updateInfo">
@@ -280,7 +284,7 @@
     </div>
 </div>
 
-
+-->
 <!--------------------------------Warning alert modal--------------------------->
 <div class="warning-modal modal">
     <div class="warningTable table">
@@ -299,7 +303,7 @@
 
 
         <!------------------------------------Body------------------------------------>
-    <div class="input-status-modal" style = "display: none">
+    <div class="input-status-modal">
         <div class = "currentLevelName title-web">
             <p>Nước Việt Nam</p>
         </div>
@@ -330,21 +334,24 @@
     </div>
     <div class="main-web-info">
         <div class="main-header">
+           <!-- <div class = "search-citizen">
+                <input type="text">
+            </div> -->
         </div>
         <div class="list-header main fw-bold dis-flex">
             <div class="c-1-info r-1 bor-right-2 stt">
                 STT
             </div>
-            <div class="c-2-info r-1 bor-right-2 mainLowLevelName">
+            <div class="c-2-info r-1 bor-right-2 name">
                 <p>Họ và tên<p>
             </div>
             <div class="c-3-info r-1 bor-right-2 status">
                 Giới tính
             </div>
-            <div class="c-4-info r-1 bor-right-2 status">
+            <div class="c-4-info r-1 bor-right-2 dob">
                 Ngày sinh
             </div>
-            <div class="c-5-info r-1 population">
+            <div class="c-5-info r-1 job">
                 Nghề nghiệp
             </div>
             <div class="c-6-info r-1 village-id">
@@ -354,7 +361,12 @@
     </div>
     <div class="updateInfo-Button completeButton">
         <button type = 'submit'>HOÀN TẤT NHẬP</button>
-        </div>
+    </div>
+    <div class="updateInfo-Button completeButton">
+        <a href="/public/citizenDoc.doc" download>
+        <button type = 'submit'>Tải xuống phiếu</button>
+        </a>
+    </div>
     </div>
 </div>
 
@@ -365,6 +377,8 @@
             <p>Tổng dân số đã thống kê: <span>9999999</span></p>
             <p>Tổng số nam: <span>120122</span></p>
             <p>Tổng số nữ: <span>120301</span></p>
+            <p>Tổng số người trên độ tuổi lao động: <span></span></p>
+            <p>Tổng số người dưới độ tuổi lao động:  <span></span></p>
         </div>
 
 

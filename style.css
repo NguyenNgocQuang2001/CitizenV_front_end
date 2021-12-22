@@ -1,507 +1,610 @@
 .dp-flex {
-    display: flex;
+  display: flex;
 }
 .nav-bar {
-    background-color: #81DAF5;
-    color: #fff;
-    height: 60px;
-    position: relative;
-    z-index: 10;
+  background-color: #81daf5;
+  color: #fff;
+  height: 60px;
+  position: relative;
+  z-index: 10;
 }
 
 .leftSide {
-    float: left;
+  float: left;
 }
 
 .leftSide img {
-    height: 50px;
-    width: 50px;
-    margin-top: 5px;
-    margin-left: 20px;
+  height: 50px;
+  width: 50px;
+  margin-top: 5px;
+  margin-left: 20px;
 }
 
 .rightSide {
-    float: right !important;
+  float: right !important;
 }
 
 .nav-button {
-    width: 120px;
-    text-align: center;
-    height: 50px;
-    margin-top: 5px;
-    cursor: Pointer;
+  width: 120px;
+  text-align: center;
+  height: 50px;
+  margin-top: 5px;
+  cursor: Pointer;
 }
 
 .userButton {
-    height: 50px;
-    cursor: pointer;
-    width: 70px;
-    text-align: center;
-    margin-top: 5px;
+  height: 50px;
+  cursor: pointer;
+  width: 70px;
+  text-align: center;
+  margin-top: 5px;
 }
 
-.nav-button:hover, .userButton:hover {
-    background-color: #00BFFF !important;
+.nav-button:hover,
+.userButton:hover {
+  background-color: #00bfff !important;
 }
 
 .bor-right {
-    border-right: 1px solid #fff;
+  border-right: 1px solid #fff;
 }
 
 .bor-bottom {
-    border-bottom: solid 1px #fff;
+  border-bottom: solid 1px #fff;
 }
 .pos-relative {
-    position: relative;
+  position: relative;
 }
 .pos-absolute {
-    position: absolute;
+  position: absolute;
 }
 
 .cover {
-    background-color: #000;
-    z-index: 1;
-    top: 0;
-    bottom:0;
-    width: 100vw;
-    height: 100vh;
-    opacity: 0;
-    display: none;
+  background-color: #000;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  display: none;
 }
-
 
 .userDropDownMenu {
-    margin-top: 15px;
-    width: 240px;
-    position: relative;
-    right: 170px;
-    background-color:#00BFFF;
-    display: none;
+  margin-top: 15px;
+  width: 240px;
+  position: relative;
+  right: 170px;
+  background-color: #00bfff;
+  display: none;
 }
 
-.singleDropDown > p{
-    margin: 0;
-    padding: 10px 20px 10px 20px;
-    color: #fff !important;
+.singleDropDown > p {
+  margin: 0;
+  padding: 10px 20px 10px 20px;
+  color: #fff !important;
 }
 .singleDropDown {
-    background-color: #00BFFF;
+  background-color: #00bfff;
 }
 
 .singleDropDown:hover {
-    background-color: #1E90FF !important;
+  background-color: #1e90ff !important;
 }
 .nav-menu {
-    text-align: center;
-    width: 70px;
-    height: 34px;
-    margin-right: 20px;
-    border-radius: 5px;
-    margin-top: 10px;
-    border: 1px solid #fff;
-    cursor: pointer;
+  text-align: center;
+  width: 70px;
+  height: 34px;
+  margin-right: 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  border: 1px solid #fff;
+  cursor: pointer;
 }
 .tablet-view {
-    display: none;
+  display: none;
 }
 .nav-menu:hover {
-    background-color: #00BFFF !important;
+  background-color: #00bfff !important;
 }
 .nav-menu p {
-    margin-top: 10px;
-    font-size: 12px;
-    font-weight: bold;
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 .tablet-menu {
-    background-color: #81DAF5;
-    font-weight: bold;
-    color: #fff;
-    position: relative;
-    z-index: 10;
-    display: none;
+  background-color: #81daf5;
+  font-weight: bold;
+  color: #fff;
+  position: relative;
+  z-index: 10;
+  display: none;
 }
 .web-view {
-    font-weight: bold;
+  font-weight: bold;
 }
 
-.singleMenuTablet p{
-    margin: 0;
-    padding: 10px 0 10px 10px;
-    cursor: pointer;
+.singleMenuTablet p {
+  margin: 0;
+  padding: 10px 0 10px 10px;
+  cursor: pointer;
 }
 
 .userDropDownMenuTablet {
-    display: none;
+  display: none;
 }
 
 .singleMenuTablet:hover {
-    background-color: #00BFFF !important;
+  background-color: #00bfff !important;
 }
 
 .odd-line {
-    background-color: #f0ffff;
+  background-color: #f0ffff;
 }
 
 .main-web {
-    width: 96%;
-    height: 700px;
-    margin: auto;
-    margin-top: 30px;
-    overflow: auto;
+  width: 96%;
+  height: 700px;
+  margin: auto;
+  margin-top: 30px;
+  overflow: auto;
 }
-
 
 .bor-right-2 {
-    border-right: 2px solid #fff;
+  border-right: 2px solid #fff;
 }
 .main:hover {
-    border: 1px solid #000;
+  border: 1px solid #000;
 }
 
 .main-header {
-    height: 50px;
-    background-image: linear-gradient(to bottom, #A9BCEA, #A9F5F2);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom: 1px solid #fff;
+  height: 50px;
+  background: linear-gradient(to bottom, #a9bcea, #a9f5f2);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom: 1px solid #fff;
 }
 
 .manageDropDownMenu .singleDropDown {
-    width: 150px;
+  width: 150px;
 }
-.manageDropDownMenu, .manageDropDownMenuTablet {
-    display: none;
+.manageDropDownMenu,
+.manageDropDownMenuTablet {
+  display: none;
 }
 
-
-.updateInfoTable { 
-    width: 600px;
+.updateInfoTable {
+  width: 600px;
 }
 
 @keyframes animatetop {
-    from {
-		transform: scale(0);
-		opacity: 20%;
-	}
-	to {
-		transform: scale(1);
-		opacity: 100%;
-	}
+  from {
+    transform: scale(0);
+    opacity: 20%;
+  }
+  to {
+    transform: scale(1);
+    opacity: 100%;
+  }
 }
 
 .header-updateInfo {
-    background-image: linear-gradient(to bottom, #A9BCEA, #A9F5F2);
-    height: 50px;
-    padding-left: 20px;
+  background-image: linear-gradient(to bottom, #a9bcea, #a9f5f2);
+  height: 50px;
+  padding-left: 20px;
 }
 .header-updateInfo > p {
-    padding-top: 15px;
+  padding-top: 15px;
 }
 
 .header-updateInfo p span {
-    float: right;
-    margin-right: 20px;
-    cursor: pointer;
-    width: 20px;
-    height: 20px;
+  float: right;
+  margin-right: 20px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
 }
 
 .singleUpdateInfo {
-    padding-left: 20px;
-    display: flex;
+  padding-left: 20px;
+  display: flex;
 }
 p {
-    margin: 0;
+  margin: 0;
 }
 
 .leftSide-Label {
-    width: 170px;
-    text-align: right;
-    margin-right: 30px;
+  width: 170px;
+  text-align: right;
+  margin-right: 30px;
 }
 .userAccountField {
-    margin: 30px 0 30px 0;
-    display: flex;
+  margin: 30px 0 30px 0;
+  display: flex;
 }
-
 
 .userNameField {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 .emailField {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .singleUpdateInfo input {
-    border: 1px solid #ccc;
-    color: #555;
-    width: 200px;
-    height: 20px;
+  border: 1px solid #ccc;
+  color: #555;
+  width: 200px;
+  height: 20px;
 }
 
 .updateInfo-Button {
-    text-align: right;  
-    margin: 20px 30px 20px 0;
+  text-align: right;
+  margin: 20px 30px 20px 0;
 }
 
-.updateInfo-Button button{
-    background-color: #5cb85c;
-    border: none;
-    height:30px;
-    border-radius: 5px;
-    color: #fff;
+.updateInfo-Button button {
+  background-color: #5cb85c;
+  border: none;
+  height: 30px;
+  border-radius: 5px;
+  color: #fff;
 }
 
-.updateInfo-Button button:hover{
-    border-radius: 5px;
-    background-color: #11866f;
+.updateInfo-Button button:hover {
+  border-radius: 5px;
+  background-color: #11866f;
 }
 
-.homePageButton > p, .manageButton > p, .userButton > p {
-    margin-top: 16px;
+.homePageButton > p,
+.manageButton > p,
+.userButton > p {
+  margin-top: 16px;
 }
 
 .modal {
-    position: relative;
-    top:0;
-    background-color: rgb(0,0,0,0.4);
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    padding-top: 50px;
-    z-index: 11;
-    display: none;
+  position: relative;
+  top: 0;
+  background-color: rgb(0, 0, 0, 0.4);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  padding-top: 50px;
+  z-index: 11;
+  display: none;
 }
 
-
 .table {
-    border: 1px solid #000;
-    font-weight: bold;
-    background-color: #fff !important;
-    box-shadow:  5px 5px 10px #000;
-    animation: animatetop;
-    animation-duration: 0.4s;
-    margin:auto;
-    z-index: 12;
-    font-size: 16px;
-    margin-bottom: 100px;
+  border: 1px solid #000;
+  font-weight: bold;
+  background-color: #fff !important;
+  box-shadow: 5px 5px 10px #000;
+  animation: animatetop;
+  animation-duration: 0.4s;
+  margin: auto;
+  z-index: 12;
+  font-size: 16px;
+  margin-bottom: 100px;
 }
 
 .registerTable {
-    width: 600px;
+  width: 600px;
 }
 
 .giveIdTable {
-    width: 500px;
+  width: 500px;
 }
 
 .register-Form .singleUpdateInfo {
-    margin-top: 25px;
+  margin-top: 25px;
 }
 
 .register-Form + .singleUpdateInfo {
-    margin-top: 100px;
+  margin-top: 100px;
 }
 
 .manageDropDownMenu .singleDropDown {
-    width: 191px;
+  width: 191px;
 }
 
 .dateAndTime input {
-    width: 140px;
-    margin-right: 20px;
+  width: 140px;
+  margin-right: 20px;
 }
 
 .givePMSTable {
-    width: 600px;
+  width: 600px;
 }
 .dis-flex {
-    display: flex;
+  display: flex;
 }
 
 .list-header {
-    background-color: #e0ffff;
+  background-color: #e0ffff;
 }
 .main {
-    text-align: center;
-    cursor: pointer;
+  text-align: center;
+  cursor: pointer;
 }
 
 .fw-bold {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .c-1 {
-    flex: 0 0 10%;
-    width: 10%;
+  flex: 0 0 10%;
+  width: 10%;
 }
 
 .c-2 {
-    flex: 0 0 35%;
-    width: 35%;
+  flex: 0 0 35%;
+  width: 35%;
 }
 
 .c-3 {
-    flex: 0 0 35%;
-    width: 35%;
+  flex: 0 0 35%;
+  width: 35%;
 }
 
 .c-4 {
-    flex: 0 0 20%;
-    width: 20%;
+  flex: 0 0 20%;
+  width: 20%;
 }
 .c-1-info {
-    flex: 0 0 10%;
-    width: 10%;
+  flex: 0 0 10%;
+  width: 10%;
 }
 
 .c-2-info {
-    flex: 0 0 25%;
-    width: 25%;
+  flex: 0 0 25%;
+  width: 25%;
 }
 
 .c-3-info {
-    flex: 0 0 15%;
-    width: 15%;
+  flex: 0 0 15%;
+  width: 15%;
 }
 
 .c-4-info {
-    flex: 0 0 15%;
-    width: 15%;
+  flex: 0 0 15%;
+  width: 15%;
 }
 .c-5-info {
-    flex: 0 0 20%;
-    width: 20%;
+  flex: 0 0 20%;
+  width: 20%;
 }
 .c-6-info {
-    flex: 0 0 10%;
-    width: 10%;
+  flex: 0 0 10%;
+  width: 10%;
 }
 
 .title-web {
-    margin-top: 15px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 20px;
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .statistics {
-    margin-top: 40px;
-    font-weight: bold;
-    margin-left: 20px;
+  margin-top: 40px;
+  font-weight: bold;
+  margin-left: 20px;
 }
 
 .statistics p {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 @media only screen and (min-width: 769px) {
-    .web-view {
-        display: flex;
-    }
-    .tablet-view, .tablet-menu {
-        display: none;
-    }
+  .web-view {
+    display: flex;
+  }
+  .tablet-view,
+  .tablet-menu {
+    display: none;
+  }
 }
-@media only screen  and (max-width: 768px) {
-    .web-view {
-        display: none;
-    }
-    .tablet-view{
-        display: block;
-    }
-    .updateInfoTable {
-        top: 8vh;
-        left: 4vw;
-    }
+@media only screen and (max-width: 768px) {
+  .web-view {
+    display: none;
+  }
+  .tablet-view {
+    display: block;
+  }
+  .updateInfoTable {
+    top: 8vh;
+    left: 4vw;
+  }
+  .population {
+    display: none;
+  }
+  .c-1 {
+    flex: 0 0 15%;
+    width: 15%;
+  }
+  .c-2 {
+    flex: 0 0 45%;
+    width: 40%;
+  }
+  .c-3 {
+    flex: 0 0 40%;
+    width: 40%;
+  }
+  .village-id {
+    display: none;
+  }
+  .c-1-info {
+    flex: 0 0 10%;
+    width: 10%;
+  }
+  .c-2-info {
+    flex: 0 0 30%;
+    width: 30%;
+  }
+  .c-3-info {
+    flex: 0 0 15%;
+    width: 15%;
+  }
+  .c-4-info {
+    flex: 0 0 25%;
+    width: 25%;
+  }
+  .c-5-info {
+    flex: 0 0 20%;
+    width: 20%;
+  }
+  .singleUpdateInfo {
+    display: block;
+  }
+  .leftSide-Label {
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  .registerTable {
+    width: 450px;
+  }
+  .singleUpdateInfo input {
+    width: 90%;
+  }
+  .singleUpdateInfo select {
+    width: 90%;
+  }
+  .givePMSTable {
+    width: 450px;
+  }
+  .updateInfoTable {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .web-view {
+    display: none;
+  }
+  .tablet-view {
+    display: block;
+  }
+  .job {
+    display: none;
+  }
+  .c-1-info {
+    flex: 0 0 15%;
+    width: 15%;
+  }
+  .c-2-info {
+    flex: 0 0 30%;
+    width: 30%;
+  }
+  .c-3-info {
+    flex: 0 0 25%;
+    width: 25%;
+  }
+  .c-4-info {
+    flex: 0 0 30%;
+    width: 30%;
+  }
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 a:visited {
-    color: #000;
+  color: #000;
 }
 
 .buttonCitizenField {
-    float: right;
-    margin-top: 10px;
-    margin-right: 20px;
+  float: right;
+  margin-top: 10px;
+  margin-right: 20px;
 }
 
 .buttonCitizenField a {
-    display: block;
-    width: 50px;
-    text-align: center;
-    padding-top: 5px;
-    border: none;
-    border-radius: 3px;
-    height: 23px;
-    background-color: #0d6efd;
-    color: #fff;
-    cursor: pointer;
+  display: block;
+  width: 50px;
+  text-align: center;
+  padding-top: 5px;
+  border: none;
+  border-radius: 3px;
+  height: 23px;
+  background-color: #0d6efd;
+  color: #fff;
+  cursor: pointer;
 }
 
 .buttonCitizenField a:hover {
-    border-radius: 3px;
-    background-color: #0b5ed7;
+  border-radius: 3px;
+  background-color: #0b5ed7;
 }
 
 .ppSentByB2-modal {
-    overflow: auto;
+  overflow: auto;
 }
 
 .ppSentByB2Table {
-    width: 750px;
+  width: 750px;
 }
 
 .warningTable {
-    width: 400px;
-    background-color: #fff !important;
+  width: 400px;
+  background-color: #fff !important;
 }
 
 .text-warning {
-    height: 100px;
-    margin-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-bottom: 1px solid #ccc;
+  height: 100px;
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-bottom: 1px solid #ccc;
 }
 
 .warningButtonField {
-    margin: 15px 0 15px 260px;
+  margin: 15px 0 15px 260px;
 }
 
 .btn {
-    background-color: #5cb85c;
-    border: none;
-    height:30px;
-    border-radius: 5px;
-    color: #fff;
+  background-color: #5cb85c;
+  border: none;
+  height: 30px;
+  border-radius: 5px;
+  color: #fff;
 }
 
 .cancelButton {
-    background-color: #dc143c;
-    width: 50px;
+  background-color: #dc143c;
+  width: 50px;
 }
 
 .confirmButton {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .cancelButton:hover {
-    background-color: #8B0000;
-    border-radius: 5px;;
+  background-color: #8b0000;
+  border-radius: 5px;
 }
 
 .confirmButton:hover {
-    border-radius: 5px;
-    background-color: #11866f;
+  border-radius: 5px;
+  background-color: #11866f;
 }
 .newPasswordField {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 .confirmNewPasswordField {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.oldPasswordField {
+  margin-bottom: 20px;
+}
+
+.search-citizen {
+  float: right;
+  margin-top: 15px;
+  margin-right: 20px;
+}
+
+.search-citizen input {
+  border-radius: 3px;
 }

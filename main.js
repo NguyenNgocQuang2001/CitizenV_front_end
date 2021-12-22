@@ -106,10 +106,10 @@ function addInfo(stt, name, status, population, href) {
     var nameDiv = $("<a></a>").text(name);
     var statusDiv = $("<div></div>").text(status);
     var ppltDiv = $("<div></div>").text(population);
-    sttDiv.addClass("c-1 bor-right-2");
-    nameDiv.addClass("c-2 bor-right-2");
-    statusDiv.addClass("c-3 bor-right-2");
-    ppltDiv.addClass("c-4");
+    sttDiv.addClass("c-1 bor-right-2 stt");
+    nameDiv.addClass("c-2 bor-right-2 mainLowLevelName");
+    statusDiv.addClass("c-3 bor-right-2 status");
+    ppltDiv.addClass("c-4 population");
     var main = $("<a></a>");
     main.attr("href", href);
     main.addClass("dis-flex main");
@@ -131,12 +131,12 @@ function addInfoCitizen(stt, name, gender, dob, job, villageId, href) {
     var main = $("<a></a>");
     main.attr("href", href);
     main.addClass("dis-flex main");
-    sttDiv.addClass("c-1-info bor-right-2");
-    nameDiv.addClass("c-2-info bor-right-2");
-    genderDiv.addClass("c-3-info bor-right-2");
-    dobDiv.addClass("c-4-info bor-right-2");
-    jobDiv.addClass("c-5-info bor-right-2");
-    villageIdDiv.addClass("c-6-info");
+    sttDiv.addClass("c-1-info bor-right-2 stt");
+    nameDiv.addClass("c-2-info bor-right-2 name");
+    genderDiv.addClass("c-3-info bor-right-2 gender");
+    dobDiv.addClass("c-4-info bor-right-2 dob");
+    jobDiv.addClass("c-5-info bor-right-2 job");
+    villageIdDiv.addClass("c-6-info village-id");
     if (stt % 2 == 0) {
         main.addClass('odd-line');
     }
@@ -144,7 +144,7 @@ function addInfoCitizen(stt, name, gender, dob, job, villageId, href) {
     $('.main-web-info').append(main);
 }
 
-function addInfoCitizenByB2(stt, name, gender, dob, job, villageId, href) {
+/*function addInfoCitizenByB2(stt, name, gender, dob, job, villageId, href) {
     var sttDiv = $("<div></div>").text(stt);
     var nameDiv = $("<div></div>").text(name);
     var genderDiv = $("<div></div>").text(gender);
@@ -165,7 +165,7 @@ function addInfoCitizenByB2(stt, name, gender, dob, job, villageId, href) {
     }
     main.append(sttDiv, nameDiv, genderDiv, dobDiv, jobDiv, villageIdDiv);
     $('.ppSentByB2List').append(main);
-}
+}*/
 
 for (var i = 0; i < 99; i ++) {
     addInfo(i,'Bắc Ninh', 'Chưa nhập xong', 'N/A', "https://www.google.com");
@@ -173,5 +173,5 @@ for (var i = 0; i < 99; i ++) {
 
 for(var i = 0; i < 99; i++) {
     addInfoCitizen(i, 'Lê Công Nam', 'Nam', '01/02/2001', 'IT','1','https://google.com');
-    addInfoCitizenByB2(i, 'Lê Công Nam', 'Nam', '01/02/2001', 'IT','1','https://google.com');
+    //addInfoCitizenByB2(i, 'Lê Công Nam', 'Nam', '01/02/2001', 'IT','1','https://google.com');
 }
