@@ -175,3 +175,53 @@ for(var i = 0; i < 99; i++) {
     addInfoCitizen(i, 'Lê Công Nam', 'Nam', '01/02/2001', 'IT','1','https://google.com');
     //addInfoCitizenByB2(i, 'Lê Công Nam', 'Nam', '01/02/2001', 'IT','1','https://google.com');
 }
+
+$('.submit-id-button').click((e) => {
+    e.preventDefault();
+    if(1) {
+    var name = $('#select-id-name').val();
+    var id = $('.id-input').val();
+    $('.alert-text').text("Đã cấp mã thành công cho " +name + " với mã: " + id);
+    } else {
+        $('.invalid-text').html("Mã cấp không hợp lệ hoặc tỉnh này đã được cấp mã!");
+    }
+})
+
+$('.register-button').click((e) => {
+    e.preventDefault();
+    if(1) {
+    var name = $('.select-name-register').val();
+    var username = $('.username-register').val();
+    var password = $('.password-register').val();
+    $('.alert-text').html("Đã cấp thành công tài khoản cho " + name + "<br/>"+ "Tài khoản: " + username +  "<br />" + "Mật khẩu: " + password)
+    } else {
+        $('.invalid-text').text("Tỉnh này đã được cấp tài khoản hoặc xác nhận mật khẩu không đúng!");
+    }
+})
+
+$('.givePMSButton').click((e) => {
+    e.preventDefault();
+    if(1) {
+    var name = $(".select-give-PMS").val();
+    var time_start = $('.time-start').val();
+    var date_start = modifyDate($('.date-start').val());
+    var time_end = $('.time-end').val();
+    var date_end = modifyDate($('.date-end').val());
+    $('.alert-text').html("Đã cấp thành công thời gian khai báo cho " + name + "<br/> Thời gian bắt đầu: " + time_start + ", ngày "+ date_start + "<br/> Thời gian kết thúc: " + time_end +", ngày "+ date_end);
+    } else {
+        $('.invalid-text').html("Thời gian bạn nhập không hợp lệ!");
+    }
+})
+
+hideAndShow('.alert-modal','.submit-id-button','.confirmButton');
+hideAndShow('.alert-modal','.register-button','.confirmButton');
+hideAndShow('.alert-modal','.givePMSButton','.confirmButton');
+hideAndShow('.announce-modal','','.announce-confirm-button');
+
+function modifyDate (date) {
+    var day = date.slice(date.length - 2, date.length );
+    var month = date.slice(date.length - 5, date.length -3);
+    var year = date.slice(0, 4);
+    var newDate = day + "/" + month + "/" + year;
+    return newDate;
+}

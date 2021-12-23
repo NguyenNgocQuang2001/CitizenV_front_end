@@ -389,6 +389,7 @@ p {
   margin-top: 40px;
   font-weight: bold;
   margin-left: 20px;
+  margin-bottom: 20px;
 }
 
 .statistics p {
@@ -607,4 +608,21 @@ a:visited {
 
 .search-citizen input {
   border-radius: 3px;
+}
+
+.alertTable {
+  width: 400px;
+}
+
+.announce {
+  display: block;
+}
+
+.announceTable {
+  width: 450px;
+}
+
+.announce-confirm-button {
+  margin-left: 100px;
+  width: 70px;
 }

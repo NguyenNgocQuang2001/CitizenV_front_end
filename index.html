@@ -7,7 +7,7 @@
     <title>Citizen V</title>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/2d94e21419.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/62a9d2ea85.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="icon" type = "image/x-icon" href="/img/logo.png" sizes="64x64">
 </head>
@@ -164,7 +164,7 @@
          <form action="" class = "register-Form">
             <div class="singleUpdateInfo ">
                 <label class = "leftSide-Label" for="lowLevelName">Chọn tỉnh/ thành phố</label>
-               <select name="lowLevelName">
+               <select name="lowLevelName" class = "select-name-register">
                    <option value="Bac Ninh">Bắc Ninh</option>
                    <option value="Ha Noi">TP.Hà Nội</option>
                    <option value="Ho Chi Minh">TP.Hồ Chí Minh</option>
@@ -172,18 +172,18 @@
             </div>
             <div class="singleUpdateInfo">
                 <label class = "leftSide-Label" for="">Tài khoản</label>
-                <input type="text" value = "99" disabled>
+                <input type="text" class = "username-register" value = "99" disabled>
             </div>
             <div class="singleUpdateInfo">
                 <label class = "leftSide-Label" for="registerPassword">Mật khẩu</label>
-                <input type="password" name = "registerPassword">
+                <input type="password" class = "password-register" name = "registerPassword">
             </div>
             <div class="singleUpdateInfo">
                 <label class = "leftSide-Label" for="confirmPassword">Nhập lại mật khẩu</label>
                 <input type="password" name = "confirmPassword">
             </div>
             <div class="updateInfo-Button">
-            <button type = 'submit'>ĐĂNG KÝ</button>
+            <button class = "register-button">ĐĂNG KÝ</button>
             </div>
         </form>
     </div>
@@ -195,10 +195,10 @@
         <div class="header-updateInfo">
             <p>Cấp mã cho các tỉnh thành<span class = "cancelGiveId"><i class="fas fa-times"></i></span></p>
          </div>
-         <form action="" class = "register-Form">
+         <form action = "" class = "register-Form">
             <div class="singleUpdateInfo ">
                 <label class = "leftSide-Label" for="lowLevelName">Chọn tỉnh/ thành phố</label>
-                <select name="lowLevelName">
+                <select name="lowLevelName" id = "select-id-name">
                    <option value="Bac Ninh">Bắc Ninh</option>
                    <option value="Ha Noi">TP.Hà Nội</option>
                    <option value="Ho Chi Minh">TP.Hồ Chí Minh</option>
@@ -206,14 +206,14 @@
             </div>
             <div class="singleUpdateInfo ">
                 <label class = "leftSide-Label" for="lowLevelName">Chọn mã</label>
-                <input type="text">  
+                <input type="number" class = "id-input" for = "id" required>  
                </select>
             </div>
             <div class="updateInfo-Button">
-            <button type = 'submit'>XÁC NHẬN</button>
+            <button class = "submit-id-button">XÁC NHẬN</button>
             </div>
-        </form>
-    </div>
+        </form> 
+        </div>
 </div>
 
 <!---------------------------------------------give Permission to declare Info ---------------------------------------->
@@ -225,7 +225,7 @@
          <form action="" class = "register-Form">
             <div class="singleUpdateInfo ">
                 <label class = "leftSide-Label" for="lowLevelName">Chọn tỉnh/ thành phố</label>
-               <select name="lowLevelName">
+               <select name="lowLevelName" class = "select-give-PMS">
                    <option value="Bac Ninh">Bắc Ninh</option>
                    <option value="Ha Noi">TP.Hà Nội</option>
                    <option value="Ho Chi Minh">TP.Hồ Chí Minh</option>
@@ -233,18 +233,18 @@
             </div>
             <div class="singleUpdateInfo dateAndTime">
                 <label class = "leftSide-Label" for="lowLevelName">Thời gian bắt đầu</label> 
-                <input type="time">
-                <input type="date" name="">
+                <input type="time" class = "time-start">
+                <input type="date" name="" class = "date-start">
                </select>
             </div>
             <div class="singleUpdateInfo dateAndTime">
                 <label class = "leftSide-Label" for="lowLevelName">Thời gian kết thúc</label> 
-                <input type="time">
-                <input type="date" name="">
+                <input type="time" class = "time-end">
+                <input type="date" name="" class = "date-end">
                </select>
             </div>
             <div class="updateInfo-Button">
-            <button type = 'submit'>XÁC NHẬN</button>
+            <button class = "givePMSButton">XÁC NHẬN</button>
             </div>
         </form>
     </div>
@@ -301,6 +301,56 @@
     </div>
 </div>
 
+<!------------------------------ alert modal---------------------------->
+<div class="alert-modal modal">
+    <div class="alertTable table">
+        <div class="header-updateInfo">
+            <p>Thông báo</p>
+        </div>
+        <div class = "text-warning">
+            <p class = "alert-text"></p>
+        </div>
+        <div class = "warningButtonField">
+            <button class = "btn confirmButton alert-confirm-button">Đồng ý</button>
+        </div>
+    </div>
+</div>
+
+<!-----------------------------announce modal-------------------------------->
+<div class="announce-modal modal announce">
+    <div class="announceTable table">
+        <div class="header-updateInfo">
+            <p>Thông báo</p>
+        </div>
+        <div class = "text-warning">
+            <p class = "announce-text">
+                Thời gian bắt đầu khai báo từ: ... đến ...
+                
+            </p>
+        </div>
+        <div class = "warningButtonField">
+            <button class = "btn confirmButton announce-confirm-button">Đồng ý</button>
+        </div>
+    </div>
+</div>
+
+<!-------------------------invalid info modal-------------------------->
+<div class="invalid-modal modal">
+    <div class="invalidTable table">
+        <div class="header-updateInfo">
+            <p>Cảnh báo</p>
+        </div>
+        <div class = "text-warning">
+            <p class = "invalid-text">
+            </p>
+        </div>
+        <div class = "warningButtonField">
+            <button class = "btn confirmButton">Nhập lại</button>
+        </div>
+    </div>
+</div>
+
+
 
         <!------------------------------------Body------------------------------------>
     <div class="input-status-modal">
@@ -355,7 +405,7 @@
                 Nghề nghiệp
             </div>
             <div class="c-6-info r-1 village-id">
-                Village id
+                Mã làng
             </div>
         </div>
     </div>
