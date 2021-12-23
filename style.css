@@ -514,6 +514,9 @@ a {
 a:visited {
   color: #000;
 }
+.homePageButton {
+  color: #fff !important;
+}
 
 .buttonCitizenField {
   float: right;
@@ -643,4 +646,49 @@ a:visited {
   width: 50px;
   height: 31px;
   border-radius: 4px;
+}
+
+.invalidTable {
+  width: 450px;
+}
+
+.rewriteButton {
+  margin-left: 90px;
+}
+
+.alert-confirm-button {
+  margin-left: 50px;
+}
+
+.home {
+  color: #fff;
+}
+.providedAccountTable {
+  width: 450px;
+  margin-bottom: 100px;
+}
+
+.c-1-ac {
+  flex: 0 0 15%;
+  width: 15%;
+}
+.c-2-ac {
+  flex: 0 0 45%;
+  width: 45%;
+}
+.c-3-ac {
+  flex: 0 0 39%;
+  width: 39%;
+}
+
+.showTable-button {
+  margin-right: 10px;
+}
+
+.providedAccount-modal {
+  overflow: auto;
+}
+
+.confirmProvidedButton {
+  margin-left: 100px;
 }
