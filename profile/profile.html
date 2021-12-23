@@ -15,17 +15,17 @@
         <div class="flexs">
             <label>Họ và Tên</label>
             <br>
-            <input type="text">
+            <input type="text" disabled>
         </div>
         <div class="flexs">
             <label>Ngày sinh</label>
             <br>
-            <input type="date">
+            <input type="date" disabled>
         </div>
         <div class="flexs">
             <label>Giới tính</label>
             <br>
-            <select>
+            <select disabled>
                 <option>Nam</option>
                 <option>Nữ</option>
             </select>
@@ -33,46 +33,52 @@
         <div class="flexs">
             <label>CMND</label>
             <br>
-            <input type="text">
+            <input type="text" disabled>
         </div>
         <div class="flexs">
             <label>Quê Quán</label>
             <br>
-            <input type="text">
+            <input type="text" disabled>
         </div>
         <div class="flexs">
             <label>Địa chỉ thường trú</label>
             <br>
-            <input type="text">
+            <input type="text" disabled>
         </div>
         <div class="flexs">
             <label>Địa chỉ tạm trú</label>
             <br>
-            <input type="text">
+            <input type="text" disabled>
         </div>
         <div class="flexs">
             <label>Tôn giáo</label>
             <br>
-            <input type="text">
+            <input type="text" disabled>
         </div>
         <div class="flexs">
             <label>Trình độ văn hóa</label>
             <br>
-            <input type="text">
+            <input type="text" disabled>
         </div>
         <div class="flexs">
             <label>Nghề Nghiệp</label>
             <br>
-            <input type="text">
+            <input type="text" disabled>
         </div>
         <div class="flexs" id="chinhsua">
-            <button type="button" onclick="chinhsua(this)">
+            <button type="button" onclick="chinhsua(this)" id="save">
                 Chỉnh sửa
             </button>
-            <button type="button" onclick="nop(this)">
+            <button type="button" onclick="nop()">
                 Nộp
             </button>
         </div>
+    </div>
+    <div id="notify">
+        <div>Thông Báo</div>
+        <div id="textnotify">
+        </div>
+        <button type="button" id="okee" onclick="okefunc()">Oke</button>
     </div>
     <script src="profile.js"></script>
 </body>
