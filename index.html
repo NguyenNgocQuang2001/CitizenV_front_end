@@ -206,7 +206,7 @@
             </div>
             <div class="singleUpdateInfo ">
                 <label class = "leftSide-Label" for="lowLevelName">Chọn mã</label>
-                <input type="number" class = "id-input" for = "id" required>  
+                <input type="text" class = "id-input" for = "id" required>  
                </select>
             </div>
             <div class="updateInfo-Button">
@@ -367,6 +367,14 @@
         <div class = "currentLevelName title-web">
             <p>Nước Việt Nam</p>
         </div>
+        <div class = "search-citizen">
+            <form action="">
+           <input type="text" name = "citizen-name" class = "input-search" placeholder="Tìm kiếm người dân">
+            <button type = "submit" class = "button-search">
+                <i class="fas fa-search"></i>
+            </button>
+           </form>
+        </div>
         <div class="main-web">
             <div class="main-header">
             </div>
@@ -391,12 +399,17 @@
 <div class="info-citizen-modal">
     <div class = "currentLevelName title-web">
         <p>Nước Việt Nam</p>
+        <div style = "font-size: 16px;" class = "search-citizen">
+            <form action="">
+           <input type="text" name = "citizen-name" class = "input-search" placeholder="Tìm kiếm người dân">
+            <button type = "submit" class = "button-search">
+                <i class="fas fa-search"></i>
+            </button>
+           </form>
+        </div>
     </div>
     <div class="main-web-info">
         <div class="main-header">
-           <!-- <div class = "search-citizen">
-                <input type="text">
-            </div> -->
         </div>
         <div class="list-header main fw-bold dis-flex">
             <div class="c-1-info r-1 bor-right-2 stt">
@@ -417,12 +430,13 @@
             <div class="c-6-info r-1 village-id">
                 Mã làng
             </div>
+            
         </div>
     </div>
     <div class="updateInfo-Button completeButton">
         <button type = 'submit'>HOÀN TẤT NHẬP</button>
     </div>
-    <div class="updateInfo-Button completeButton">
+    <div class="updateInfo-Button">
         <a href="/public/citizenDoc.doc" download>
         <button type = 'submit'>Tải xuống phiếu</button>
         </a>
