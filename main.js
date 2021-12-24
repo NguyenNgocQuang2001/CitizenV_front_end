@@ -156,10 +156,10 @@ for(var i = 0; i < 99; i++) {
 $('.submit-id-button').click((e) => {
     e.preventDefault();
     // data cho fetch
-    var name = $('.give-id-name').text();
+    var name = $('.give-id-name').val();
     var id = $('.give-id-id').val();
     // --------- //
-    if(1) {
+    if(name.length > 0 && id.length >1) {
     $('.alert-text').text("Đã cấp mã thành công cho " + name + " với mã: " + id);
     $('.alert-modal').show();
     } else {
@@ -275,7 +275,7 @@ addValueToSelectTag('.select-name-register', "thanh hóa", '11');
 
 // Hàm để lắng nghe mỗi khi thẻ select thay đổi thì thẻ value của thẻ input cũng thay đổi
 $('.select-name-register').on('change', () => {
-    var x = $('.select-name-register').find('option:selected').attr('id');
+    var x = $('.select-name-register').find('option:selected').attr('data-id');
     $('.username-register').val(x);
 })
 
