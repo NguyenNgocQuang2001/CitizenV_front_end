@@ -1,6 +1,7 @@
 .dp-flex {
   display: flex;
 }
+
 .nav-bar {
   background-color: #81daf5;
   color: #fff;
@@ -477,6 +478,12 @@ p {
   .updateInfoTable {
     width: 450px;
   }
+  .givenPMSTable {
+    width: 550px !important;
+  }
+  .confirmGivenPMSButton {
+    margin-left: 200px !important;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -691,4 +698,45 @@ a:visited {
 
 .confirmProvidedButton {
   margin-left: 100px;
+}
+
+/**/
+footer {
+  background-color: #708090;
+  height: 100px;
+  color: #fff;
+}
+
+.footer {
+  padding: 20px 0 0 20px;
+  line-height: 1.3em;
+}
+
+.c-1-gp {
+  flex: 0 0 10%;
+  width: 10%;
+}
+.c-2-gp {
+  flex: 0 0 20%;
+  width: 20%;
+}
+.c-3-gp {
+  flex: 0 0 35%;
+  width: 35%;
+}
+.c-4-gp {
+  flex: 0 0 35%;
+  width: 35%;
+}
+
+.givenPMSTable {
+  width: 700px;
+}
+
+.givenPMS-modal {
+  overflow: auto;
+}
+
+.confirmGivenPMSButton {
+  margin-left: 350px;
 }

@@ -224,13 +224,13 @@
          <form action="" class = "register-Form">
              <div class = "singleUpdateInfo dateAndTime">
                 <label class = "leftSide-Label">Thời gian bắt đầu tối thiểu</label>
-                <input type="time time-start-deadline" value = "7:00:00" disabled>
-                <input type="date date-start-deadline" value = "20-02-2020" disabled>
+                <input type="time" class = "time-start-deadline" value = "07:00:00" disabled>
+                <input type="date" class = "date-start-deadline" value = "2020-02-20" disabled>
              </div>
              <div class = "singleUpdateInfo dateAndTime">
                 <label class = "leftSide-Label">Thời gian kết thúc tối đa</label>
-                <input type="time time-end-deadline" value = "10:00:00" disabled>
-                <input type="date date-end-deadline" value = "20-03-2021" disabled>
+                <input type="time" class = "time-end-deadline" value = "10:00:00" disabled>
+                <input type="date" class = "date-end-deadline" value = "2021-03-20" disabled>
              </div>
             <div class="singleUpdateInfo ">
                 <label class = "leftSide-Label" for="lowLevelName">Chọn đơn vị</label>
@@ -253,7 +253,8 @@
                </select>
             </div>
             <div class="updateInfo-Button">
-            <button class = "givePMSButton">XÁC NHẬN</button>
+            <button class = "listGivenPMSButton">DANH SÁCH ĐÃ CẤP</button>
+            <button class = "givePMSButton" style = "margin-left: 10px;">XÁC NHẬN</button>
             </div>
         </form>
     </div>
@@ -304,7 +305,7 @@
             <p>Sau khi hoàn tất, bạn không thể sửa hay xóa, hay thêm dữ liệu nữa.</p>
         </div>
         <div class = "warningButtonField">
-            <button class = "btn confirmButton">Đồng ý</button>
+            <button class = "btn confirmButton confirmedButton">Đồng ý</button>
             <button class = "btn cancelButton">Hủy</button>
         </div>
     </div>
@@ -384,6 +385,35 @@
     </div>
 </div>
 
+<!----------------------------------given permission modal-------------------------------------->
+<div class="givenPMS-modal modal">
+    <div class="givenPMSTable table">
+        <div class="header-updateInfo">
+            <p>Danh sách các đơn vị đã cấp quyền khai báo</p>
+        </div>
+        <div class = "mainGivenPMSTable">
+            <div class ="list-header main fw-bold dis-flex">
+                <div class="c-1-gp bor-right-2">
+                    <p>STT</p>
+                </div>
+                <div class="c-2-gp bor-right-2">
+                    <p>Tên đơn vị</p>
+                </div>
+                <div class="c-3-gp bor-right-2">
+                    <p>Thời gian bắt đầu</p>
+                </div>
+                <div class="c-4-gp">
+                    <p>Thời gian kết thúc</p>
+                </div>
+            </div>
+        </div>
+        <div class = "warningButtonField">
+            <button class = "btn confirmButton confirmGivenPMSButton">ĐỒNG Ý</button>
+        </div>
+    </div>
+</div>
+
+
         <!------------------------------------Body------------------------------------>
     <div class="input-status-modal">
         <div class = "currentLevelName title-web">
@@ -418,7 +448,7 @@
     </div>
 
 
-<div class="info-citizen-modal" style = "display: none" >
+<div class="info-citizen-modal">
     <div class = "currentLevelName title-web">
         <p>Nước Việt Nam</p>
         <div style = "font-size: 16px;" class = "search-citizen">
@@ -455,8 +485,8 @@
             
         </div>
     </div>
-    <div class="updateInfo-Button completeButton">
-        <button type = 'submit'>HOÀN TẤT NHẬP</button>
+    <div class="updateInfo-Button ">
+        <button type = 'submit' class = "completeButton">HOÀN TẤT NHẬP</button>
     </div>
     <div class="updateInfo-Button">
         <a href="/public/citizenDoc.doc" download>
@@ -468,25 +498,31 @@
 
 
 
+
+
 <!--------------------------------------------------Footer---------------------------------->
         <div class = "statistics">
-            <p>Tổng dân số đã thống kê: <span>9999999</span></p>
-            <p>Tổng số nam: <span>120122</span></p>
-            <p>Tổng số nữ: <span>120301</span></p>
-            <p>Tổng số người trên độ tuổi lao động: <span></span></p>
-            <p>Tổng số người dưới độ tuổi lao động:  <span></span></p>
+            <p>Tổng dân số đã thống kê: <span class = "total-population">9999999</span></p>
+            <p>Tổng số nam: <span class = "male-citizens">120122</span></p>
+            <p>Tổng số nữ: <span class = "female-citizens">120301</span></p>
+            <p>Tổng số người trên độ tuổi lao động: <span class = "upperLabourAge"></span></p>
+            <p>Tổng số người trong độ tuổi lao động: <span class = "inLabourAge"></span></p>
+            <p>Tổng số người dưới độ tuổi lao động:  <span class = "underLabourAge"></span></p>
         </div>
-
-
-
-
-        <!-------------------------------------Footer----------------------------------------->
     </div>
     <div class="cover pos-absolute" onclick = closeDropDown()>
     </div>
     <div class="cover1 pos-absolute">
-
     </div>
+    <!--------------------------------------------------Footer---------------------------------->
+    <footer>
+        <div class = "footer">
+            <p>Trường ĐH Công Nghệ - ĐHQGHN</p>
+            <p>Tác giả: Lê Công Nam, Nguyễn Hoàng Tùng, Nguyễn Ngọc Quang (QNT)</p>
+            <p>Copyright <span><i class="far fa-copyright"></i></span> QNT 2021</p>
+        </div>
+    </footer>
+
     <script src = 'main.js'></script>
 </body>
 </html>

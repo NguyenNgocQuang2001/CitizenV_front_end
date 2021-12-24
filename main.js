@@ -317,11 +317,72 @@ function addProvidedAccount(stt, name, username) {
     $('.mainTable').append(main);   
 }
 
+function addGivenPMS(stt, name, dateAndTimeStart, dateAndTimeEnd) {
+    var sttDiv = $("<div></div>").text(stt);
+    var nameDiv = $("<div></div").text(name);
+    var startDiv = $("<div></div>").text(dateAndTimeStart);
+    var endDiv = $("<div></div>").text(dateAndTimeEnd);
+    var main = $('<div></div>');
+    sttDiv.addClass("c-1-gp bor-right-2");
+    nameDiv.addClass("c-2-gp bor-right-2");
+    startDiv.addClass("c-3-gp bor-right-2");
+    endDiv.addClass("c-4-gp");
+    if (stt % 2 == 1) {
+        main.addClass('odd-line');
+    }
+    main.addClass("dis-flex main");
+    main.append(sttDiv,nameDiv,startDiv,endDiv);
+    $('.mainGivenPMSTable').append(main);   
+}
+
 for (var i = 0; i < 50; i++) {
     addProvidedAccount(i, 'name',1);
+    addGivenPMS(i, "Bac Ninh", "2021-09-20 11:59:00", "2021-11-20 11:58:00");
 }
 
 hideAndShow('.providedAccount-modal', '.showTable-button', '.confirmProvidedButton');
 $('.showTable-button').click((e) => {
     e.preventDefault();
+})
+
+//// 
+function modifyTimeDeadline(dateAndTimeStart, dateAndTimeEnd) {
+    var timeStart = dateAndTimeStart.slice(11,dateAndTimeStart.length);
+    var dateStart = dateAndTimeStart.slice(0,10);
+    var timeEnd = dateAndTimeEnd.slice(11,dateAndTimeEnd.length);
+    var dateEnd = dateAndTimeEnd.slice(0,10);
+    $('.time-start-deadline').val(timeStart);
+    $('.date-start-deadline').val(dateStart);
+    $('.time-end-deadline').val(timeEnd);
+    $('.date-end-deadline').val(dateEnd);
+    
+}
+
+// test modify Time deadline
+var timeStartTest = "2021-09-20 11:59:00";
+var timeEndTest = "2021-11-20 11:58:00";
+modifyTimeDeadline(timeStartTest, timeEndTest);
+
+function addInfoToStatistic(total, male, female, upperAge, inAge, underAge) {
+    $(".total-population").text(total);
+    $(".male-citizens").text(male);
+    $(".female-citizens").text(female);
+    $(".upperLabourAge").text(upperAge);
+    $(".inLabourAge").text(inAge);
+    $(".underLabourAge").text(underAge);
+}
+
+addInfoToStatistic(1999, 100, 100, 33,22,33);
+
+$('.listGivenPMSButton').click((e) => {
+    e.preventDefault();
+})
+
+hideAndShow('.givenPMS-modal','.listGivenPMSButton','.confirmGivenPMSButton');
+
+
+//khi người dùng ấn hoàn tất nhập
+$('.confirmedButton').click(() => {
+    //do something ...
+    
 })
