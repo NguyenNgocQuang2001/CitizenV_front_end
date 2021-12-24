@@ -740,3 +740,15 @@ footer {
 .confirmGivenPMSButton {
   margin-left: 350px;
 }
+
+.confirmGivenIdButton {
+  margin-left: 100px;
+}
+
+.givenIdTable {
+  width: 450px;
+}
+
+.givenId-modal {
+  overflow: auto;
+}

@@ -205,11 +205,12 @@
             </div>
             <div class="singleUpdateInfo ">
                 <label class = "leftSide-Label" for="lowLevelName">Chọn mã</label>
-                <input type="text" class = "give-id-id" for = "id" required>  
+                <input type="text" class = "give-id-id" for = "id">  
                </select>
             </div>
             <div class="updateInfo-Button">
-            <button class = "submit-id-button">XÁC NHẬN</button>
+                <button class = "listGivenIdButton">ĐƠN VỊ ĐÃ CẤP</button>
+                <button class = "submit-id-button" style = "margin-left: 10px">XÁC NHẬN</button>
             </div>
         </form> 
         </div>
@@ -381,6 +382,31 @@
         </div>
         <div class = "warningButtonField">
             <button class = "btn confirmButton confirmProvidedButton">ĐỒNG Ý</button>
+        </div>
+    </div>
+</div>
+
+<!------------------------------Given ID modal---------------------------------->
+<div class="givenId-modal modal">
+    <div class="givenIdTable table">
+        <div class="header-updateInfo">
+            <p>Danh sách các đơn vị đã được cấp mã</p>
+        </div>
+        <div class = "mainGivenIdTable">
+            <div class ="list-header main fw-bold dis-flex">
+                <div class="c-1-ac bor-right-2">
+                    <p>STT</p>
+                </div>
+                <div class="c-2-ac bor-right-2">
+                    <p>Tên đơn vị</p>
+                </div>
+                <div class="c-3-ac">
+                    <p>Mã đã cấp</p>
+                </div>
+            </div>
+        </div>
+        <div class = "warningButtonField">
+            <button class = "btn confirmButton confirmGivenIdButton">ĐỒNG Ý</button>
         </div>
     </div>
 </div>

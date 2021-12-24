@@ -347,19 +347,18 @@ $('.showTable-button').click((e) => {
 
 //// 
 function modifyTimeDeadline(dateAndTimeStart, dateAndTimeEnd) {
-    var timeStart = dateAndTimeStart.slice(11,dateAndTimeStart.length);
+    var timeStart = dateAndTimeStart.slice(11,19);
     var dateStart = dateAndTimeStart.slice(0,10);
-    var timeEnd = dateAndTimeEnd.slice(11,dateAndTimeEnd.length);
+    var timeEnd = dateAndTimeEnd.slice(11,19);
     var dateEnd = dateAndTimeEnd.slice(0,10);
     $('.time-start-deadline').val(timeStart);
     $('.date-start-deadline').val(dateStart);
     $('.time-end-deadline').val(timeEnd);
     $('.date-end-deadline').val(dateEnd);
-    
 }
 
 // test modify Time deadline
-var timeStartTest = "2021-09-20 11:59:00";
+var timeStartTest = "2021-12-31T08:01:03.000Z";
 var timeEndTest = "2021-11-20 11:58:00";
 modifyTimeDeadline(timeStartTest, timeEndTest);
 
@@ -384,5 +383,31 @@ hideAndShow('.givenPMS-modal','.listGivenPMSButton','.confirmGivenPMSButton');
 //khi người dùng ấn hoàn tất nhập
 $('.confirmedButton').click(() => {
     //do something ...
-    
+
 })
+
+function addGivenId(stt, name, id) {
+    var sttDiv = $("<div></div>").text(stt);
+    var nameDiv = $("<div></div").text(name);
+    var idDiv = $("<div></div>").text(id);
+    var main = $('<div></div>');
+    sttDiv.addClass("c-1-ac bor-right-2");
+    nameDiv.addClass("c-2-ac bor-right-2");
+    idDiv.addClass("c-3-ac");
+    if (stt % 2 == 1) {
+        main.addClass('odd-line');
+    }
+    main.addClass("dis-flex main");
+    main.append(sttDiv,nameDiv,idDiv);
+    $('.mainGivenIdTable').append(main);   
+}
+
+for (var i = 0; i <20; i++) {
+    addGivenId(i, 'nam',1);
+}
+
+$('.listGivenIdButton').click((e) => {
+    e.preventDefault();
+})
+hideAndShow('.givenId-modal','.listGivenIdButton','.confirmGivenIdButton')
+
