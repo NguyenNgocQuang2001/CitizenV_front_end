@@ -411,3 +411,15 @@ $('.listGivenIdButton').click((e) => {
 })
 hideAndShow('.givenId-modal','.listGivenIdButton','.confirmGivenIdButton')
 
+function modifyCurrentLevelName(name) {
+    $('.currentLevelName').text(name);
+}
+
+modifyCurrentLevelName('Ha Noi');
+
+$('.button-search').click((e)=> {
+    e.preventDefault();
+    var value = $('.input-search').val();
+    $('.search-form').attr("action",);
+
+})
