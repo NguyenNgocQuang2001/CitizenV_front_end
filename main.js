@@ -204,7 +204,7 @@ $('.givePMSButton').click((e) => {
         // data cho fetch
         var date_and_time_start = date_start + " " + time_start;
         var date_and_time_end = date_end + " " + time_end;
-        var id = $('.select-give-PMS').find('option:selected').attr('id');
+        var id = $('.select-give-PMS').find('option:selected').attr('data-id');
         // ----------
         date_start = modifyDate(date_start);
         date_end = modifyDate(date_end);
@@ -267,9 +267,8 @@ function modifyDate (date) {
 function addValueToSelectTag(tag,name, id) {
     var nameOption = $("<option></option>").text(name);
     nameOption.attr("value", name);
-    nameOption.attr("id", id);
+    nameOption.attr("data-id", id);
     $(tag).append(nameOption);
-    console.log(nameOption);
 }
 
 addValueToSelectTag('.select-name-register', "thanh hóa", '11');
