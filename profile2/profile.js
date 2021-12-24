@@ -33,6 +33,7 @@ var diachitamchu = "";
 var tongiao = "";
 var trinhdovanhoa = "";
 var nghenghiep = "";
+var lang = "";
 
 function gangiatri() {
 
@@ -61,6 +62,7 @@ function gangiatri() {
     var sel = document.getElementsByTagName('select');
     gioitinh = sel[0].value;
     tongiao = sel[1].value;
+    lang = sel[2].value;
 }
 
 function insertTonGiao(text) {
@@ -73,7 +75,18 @@ function insertTonGiao(text) {
 }
 
 
+function insertLang(text) {
+
+    var sel = document.getElementsByTagName('select')[2];
+    var optionT = sel.getElementsByTagName('option')[0];
+    var cln = optionT.cloneNode(true);
+    cln.innerText = text;
+    sel.appendChild(cln);
+}
+
+
 //insertTonGiao('Phat Giao');
+//insertLang('Lang Lang');
 
 
 
